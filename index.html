@@ -13,66 +13,92 @@
             }
             body{
                 font-family: 'kanit';
+                font-size: 14px;
             }
-            #register {
-                color: darkblue;
-                font-size: 24px;
-                font-weight: 800;
-                padding: 10px;
-                margin: 10px;
-                background-color: darkgray;
-                padding-left: 20px;
-                border: 1px black;
+            .container{
+                width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .header{
+                font-size: 30px;
+                text-align: center;
             }
             .header-form{
-                font-weight: 800;
+                width: 140px;
             }
+            .flex{
+                display: flex;
+            }
+            .form-input{
+                margin-bottom: 10px;
+            }
+            input.form,textarea{
+                width: 100%;
+            }
+
     </style>
 
 
 </head>
 <body>
-<div id="register" >Register Form</div>
-<span class="header-form">ชื่อจริง</span> <input class="form" type="text">
-<span class="header-form">นามสกุล</span> <input class="form" type="text"> <br>
-<span class="header-form">อายุ</span> <input class="form" type="number" min="0" max="100">
-<div>
-        เพศ
 
-            <div>
-                <input name = "gender" type="radio" > ชาย
-            </div>
+<div class="container">
+    <div class="header">
+        Register Form
+    </div>
+    <div class="flex form-input" >
+        <div class="header-form">ชื่อจริง</div> 
+        <input class="form" type="text">
+    </div>
 
-            <div>
-                <input name = "gender" type="radio" > หญิง
-            </div>
+    <div class="flex form-input">
+        <div class="header-form">นามสกุล</div> 
+        <input class="form" type="text"> <br>
+    </div>
 
-            <div>
-                <input name = "gender" type="radio" > ไม่ระบุ
-            </div>
+    <div class="flex form-input">
+        <div class="header-form">อายุ</div> 
+        <input class="form" type="number" min="0" max="100">
+    </div>
+    
+    
+    <div class="gender form-input">
+            เพศ
+    
+                <div>
+                    <input name = "gender" type="radio" > ชาย
+                    <input name = "gender" type="radio" > หญิง
+                    <input name = "gender" type="radio" > ไม่ระบุ
+                </div>
+    </div>
+    
+    <div class="form-input">
+        สิ่งที่สนใจ
+        <div>
+            <input name="interest" type="checkbox"> หนังสือ
+        </div>
+        <div>
+            <input name="interest" type="checkbox"> การเมือง
+        </div>
+        <div>
+            <input name="interest" type="checkbox"> เกม
+        </div>
+    </div>
+    
+    <div class="form-input">
+        คำอธิบายเพิ่มเติม
+        <div>
+            <textarea></textarea>
+        </div>
+    </div>
+    <button>ส่งข้อมูล</button>
+    
+    
+
 </div>
 
-<div>
-    สิ่งที่สนใจ
-    <div>
-        <input name="interest" type="checkbox"> หนังสือ
-    </div>
-    <div>
-        <input name="interest" type="checkbox"> การเมือง
-    </div>
-    <div>
-        <input name="interest" type="checkbox"> เกม
-    </div>
-</div>
 
-<div>
-    คำอธิบายเพิ่มเติม
-    <div>
-        <textarea></textarea>
-    </div>
-</div>
-<button>ส่งข้อมูล</button>
-<input type="submit" value="ส่งข้อมูล">
 
 </body>
 </html>
